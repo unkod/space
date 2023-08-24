@@ -8,12 +8,12 @@ import (
 
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/resolvers"
-	"github.com/pocketbase/pocketbase/tools/search"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/daos"
+	"github.com/unkod/space/forms"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/resolvers"
+	"github.com/unkod/space/tools/search"
 )
 
 const expandQueryParam = "expand"

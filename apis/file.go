@@ -7,13 +7,13 @@ import (
 	"strings"
 
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tokens"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/security"
 	"github.com/spf13/cast"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/tokens"
+	"github.com/unkod/space/tools/list"
+	"github.com/unkod/space/tools/security"
 )
 
 var imageContentTypes = []string{"image/png", "image/jpg", "image/jpeg", "image/gif"}

@@ -3,8 +3,8 @@ package tokens_test
 import (
 	"testing"
 
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tokens"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tokens"
 )
 
 func TestNewRecordAuthToken(t *testing.T) {

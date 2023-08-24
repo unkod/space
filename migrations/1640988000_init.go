@@ -6,12 +6,12 @@ import (
 	"runtime"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/models/settings"
-	"github.com/pocketbase/pocketbase/tools/migrate"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/unkod/space/daos"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/models/settings"
+	"github.com/unkod/space/tools/migrate"
+	"github.com/unkod/space/tools/types"
 )
 
 var AppMigrations migrate.MigrationsList

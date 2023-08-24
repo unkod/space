@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/tools/list"
+	"github.com/unkod/space/tools/types"
 )
 
 func TestCollectionTableName(t *testing.T) {

@@ -8,13 +8,13 @@ import (
 	"strings"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/security"
-	"github.com/pocketbase/pocketbase/tools/tokenizer"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/tools/inflector"
+	"github.com/unkod/space/tools/list"
+	"github.com/unkod/space/tools/security"
+	"github.com/unkod/space/tools/tokenizer"
+	"github.com/unkod/space/tools/types"
 )
 
 // DeleteView drops the specified view name.

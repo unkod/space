@@ -8,11 +8,11 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tools/auth"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/daos"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/tools/auth"
+	"github.com/unkod/space/tools/security"
 	"golang.org/x/oauth2"
 )
 

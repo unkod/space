@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/list"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tools/list"
 )
 
 func TestHasTable(t *testing.T) {

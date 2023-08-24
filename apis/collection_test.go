@@ -10,10 +10,10 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/list"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tools/list"
 )
 
 func TestCollectionsList(t *testing.T) {

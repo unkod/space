@@ -1,4 +1,4 @@
-// Package apis implements the default PocketBase api services and middlewares.
+// Package apis implements the default Space api services and middlewares.
 package apis
 
 import (
@@ -14,10 +14,9 @@ import (
 
 	"github.com/labstack/echo/v5"
 	"github.com/labstack/echo/v5/middleware"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/rest"
-	"github.com/pocketbase/pocketbase/ui"
 	"github.com/spf13/cast"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/tools/rest"
 )
 
 const trailedAdminPath = "/_/"
@@ -115,9 +114,6 @@ func InitApi(app core.App) (*echo.Echo, error) {
 		}
 	}
 
-	// admin ui routes
-	bindStaticAdminUI(app, e)
-
 	// default routes
 	api := e.Group("/api", eagerRequestInfoCache(app))
 	bindSettingsApi(app, api)
@@ -168,29 +164,6 @@ func StaticDirectoryHandler(fileSystem fs.FS, indexFallback bool) echo.HandlerFu
 
 		return fileErr
 	}
-}
-
-// bindStaticAdminUI registers the endpoints that serves the static admin UI.
-func bindStaticAdminUI(app core.App, e *echo.Echo) error {
-	// redirect to trailing slash to ensure that relative urls will still work properly
-	e.GET(
-		strings.TrimRight(trailedAdminPath, "/"),
-		func(c echo.Context) error {
-			return c.Redirect(http.StatusTemporaryRedirect, strings.TrimLeft(trailedAdminPath, "/"))
-		},
-	)
-
-	// serves static files from the /ui/dist directory
-	// (similar to echo.StaticFS but with gzip middleware enabled)
-	e.GET(
-		trailedAdminPath+"*",
-		echo.StaticDirectoryHandler(ui.DistDirFS, false),
-		installerRedirect(app),
-		uiCacheControl(),
-		middleware.Gzip(),
-	)
-
-	return nil
 }
 
 func uiCacheControl() echo.MiddlewareFunc {

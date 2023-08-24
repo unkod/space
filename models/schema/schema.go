@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/unkod/space/tools/list"
+	"github.com/unkod/space/tools/security"
 )
 
 // NewSchema creates a new Schema instance with the provided fields.

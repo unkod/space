@@ -13,10 +13,10 @@ import (
 	"github.com/fatih/color"
 	"github.com/labstack/echo/v5/middleware"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/migrations/logs"
-	"github.com/pocketbase/pocketbase/tools/migrate"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/migrations"
+	"github.com/unkod/space/migrations/logs"
+	"github.com/unkod/space/tools/migrate"
 	"golang.org/x/crypto/acme"
 	"golang.org/x/crypto/acme/autocert"
 )
@@ -42,11 +42,11 @@ type ServeConfig struct {
 //
 // Example:
 //
-// 	app.Bootstrap()
-// 	apis.Serve(app, apis.ServeConfig{
-// 		HttpAddr:        "127.0.0.1:8080",
-// 		ShowStartBanner: false,
-// 	})
+//	app.Bootstrap()
+//	apis.Serve(app, apis.ServeConfig{
+//		HttpAddr:        "127.0.0.1:8080",
+//		ShowStartBanner: false,
+//	})
 func Serve(app core.App, config ServeConfig) (*http.Server, error) {
 	if len(config.AllowedOrigins) == 0 {
 		config.AllowedOrigins = []string{"*"}

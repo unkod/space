@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/core"
 	"github.com/spf13/cobra"
+	"github.com/unkod/space/apis"
+	"github.com/unkod/space/core"
 )
 
 // NewServeCommand creates and returns new command responsible for

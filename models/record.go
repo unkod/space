@@ -9,12 +9,12 @@ import (
 	"time"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/security"
-	"github.com/pocketbase/pocketbase/tools/store"
-	"github.com/pocketbase/pocketbase/tools/types"
 	"github.com/spf13/cast"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/tools/list"
+	"github.com/unkod/space/tools/security"
+	"github.com/unkod/space/tools/store"
+	"github.com/unkod/space/tools/types"
 	"golang.org/x/crypto/bcrypt"
 )
 

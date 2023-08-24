@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tools/filesystem"
 )
 
 func TestNewFileFromPath(t *testing.T) {

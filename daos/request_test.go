@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tools/types"
 )
 
 func TestRequestQuery(t *testing.T) {

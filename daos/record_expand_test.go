@@ -6,11 +6,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/list"
+	"github.com/unkod/space/daos"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tools/list"
 )
 
 func TestExpandRecords(t *testing.T) {

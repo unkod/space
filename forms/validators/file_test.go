@@ -5,10 +5,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/forms/validators"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/rest"
+	"github.com/unkod/space/forms/validators"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tools/filesystem"
+	"github.com/unkod/space/tools/rest"
 )
 
 func TestUploadedFileSize(t *testing.T) {

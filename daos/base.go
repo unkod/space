@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
+	"github.com/unkod/space/models"
 )
 
 // New creates a new Dao instance with the provided db builder

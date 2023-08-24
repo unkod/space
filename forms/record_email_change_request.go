@@ -3,11 +3,11 @@ package forms
 import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/mails"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/daos"
+	"github.com/unkod/space/mails"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
 )
 
 // RecordEmailChangeRequest is an auth record email change request form.

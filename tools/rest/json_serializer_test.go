@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/tools/rest"
-	"github.com/pocketbase/pocketbase/tools/search"
+	"github.com/unkod/space/tools/rest"
+	"github.com/unkod/space/tools/search"
 )
 
 func TestSerialize(t *testing.T) {

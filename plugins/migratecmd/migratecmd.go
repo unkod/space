@@ -23,12 +23,12 @@ import (
 	"time"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/migrate"
 	"github.com/spf13/cobra"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/migrations"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/tools/inflector"
+	"github.com/unkod/space/tools/migrate"
 )
 
 // Config defines the config options of the migratecmd plugin.

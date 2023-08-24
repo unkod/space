@@ -6,12 +6,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/plugins/migratecmd"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/unkod/space/daos"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/plugins/migratecmd"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tools/types"
 )
 
 func TestAutomigrateCollectionCreate(t *testing.T) {
@@ -70,9 +70,9 @@ import (
 	"encoding/json"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	m "github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/models"
+	"github.com/unkod/space/daos"
+	m "github.com/unkod/space/migrations"
+	"github.com/unkod/space/models"
 )
 
 func init() {
@@ -243,9 +243,9 @@ import (
 	"encoding/json"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	m "github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/models"
+	"github.com/unkod/space/daos"
+	m "github.com/unkod/space/migrations"
+	"github.com/unkod/space/models"
 )
 
 func init() {
@@ -488,10 +488,10 @@ import (
 	"encoding/json"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	m "github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/unkod/space/daos"
+	m "github.com/unkod/space/migrations"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/tools/types"
 )
 
 func init() {

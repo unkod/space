@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
+	"github.com/unkod/space/forms"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/tests"
 )
 
 func TestRecordEmailChangeRequestValidateAndSubmit(t *testing.T) {

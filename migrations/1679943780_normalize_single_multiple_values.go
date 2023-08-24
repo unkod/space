@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
+	"github.com/unkod/space/daos"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
 )
 
 // Normalizes old single and multiple values of MultiValuer fields (file, select, relation).

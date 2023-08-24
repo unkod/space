@@ -6,13 +6,13 @@ import (
 	"testing"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/dbutils"
-	"github.com/pocketbase/pocketbase/tools/security"
 	"github.com/spf13/cast"
+	"github.com/unkod/space/forms"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/tests"
+	"github.com/unkod/space/tools/dbutils"
+	"github.com/unkod/space/tools/security"
 )
 
 func TestNewCollectionUpsert(t *testing.T) {

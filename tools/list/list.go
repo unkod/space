@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/pocketbase/pocketbase/tools/store"
 	"github.com/spf13/cast"
+	"github.com/unkod/space/tools/store"
 )
 
 var cachedPatterns = store.New[*regexp.Regexp](nil)

@@ -7,16 +7,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pocketbase/pocketbase"
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/plugins/ghupdate"
-	"github.com/pocketbase/pocketbase/plugins/jsvm"
-	"github.com/pocketbase/pocketbase/plugins/migratecmd"
+	space "github.com/unkod/space"
+	"github.com/unkod/space/apis"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/plugins/ghupdate"
+	"github.com/unkod/space/plugins/jsvm"
+	"github.com/unkod/space/plugins/migratecmd"
 )
 
 func main() {
-	app := pocketbase.New()
+	app := space.New()
 
 	// ---------------------------------------------------------------
 	// Optional plugin flags:

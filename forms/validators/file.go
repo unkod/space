@@ -6,7 +6,7 @@ import (
 
 	"github.com/gabriel-vasile/mimetype"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
+	"github.com/unkod/space/tools/filesystem"
 )
 
 // UploadedFileSize checks whether the validated `rest.UploadedFile`

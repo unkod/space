@@ -13,15 +13,15 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/settings"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/mailer"
-	"github.com/pocketbase/pocketbase/tools/routine"
-	"github.com/pocketbase/pocketbase/tools/store"
-	"github.com/pocketbase/pocketbase/tools/subscriptions"
+	"github.com/unkod/space/daos"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/settings"
+	"github.com/unkod/space/tools/filesystem"
+	"github.com/unkod/space/tools/hook"
+	"github.com/unkod/space/tools/mailer"
+	"github.com/unkod/space/tools/routine"
+	"github.com/unkod/space/tools/store"
+	"github.com/unkod/space/tools/subscriptions"
 )
 
 const (

@@ -22,9 +22,9 @@ import (
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/fatih/color"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/archive"
 	"github.com/spf13/cobra"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/tools/archive"
 )
 
 // HttpClient is a base HTTP client interface (usually used for test purposes).

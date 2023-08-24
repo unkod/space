@@ -5,12 +5,12 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tokens"
-	"github.com/pocketbase/pocketbase/tools/routine"
-	"github.com/pocketbase/pocketbase/tools/search"
+	"github.com/unkod/space/core"
+	"github.com/unkod/space/forms"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/tokens"
+	"github.com/unkod/space/tools/routine"
+	"github.com/unkod/space/tools/search"
 )
 
 // bindAdminApi registers the admin api endpoints and the corresponding handlers.

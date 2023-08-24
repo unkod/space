@@ -8,15 +8,15 @@ import (
 	"strings"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/resolvers"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/security"
-	"github.com/pocketbase/pocketbase/tools/types"
 	"github.com/spf13/cast"
+	"github.com/unkod/space/models"
+	"github.com/unkod/space/models/schema"
+	"github.com/unkod/space/resolvers"
+	"github.com/unkod/space/tools/inflector"
+	"github.com/unkod/space/tools/list"
+	"github.com/unkod/space/tools/search"
+	"github.com/unkod/space/tools/security"
+	"github.com/unkod/space/tools/types"
 )
 
 // RecordQuery returns a new Record select query from a collection model, id or name.
