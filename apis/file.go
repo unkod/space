@@ -87,7 +87,7 @@ func (api *fileApi) download(c echo.Context) error {
 
 	options, ok := fileField.Options.(*schema.FileOptions)
 	if !ok {
-		return NewBadRequestError("", errors.New("Failed to load file options."))
+		return NewBadRequestError("", errors.New("failed to load file options"))
 	}
 
 	// check whether the request is authorized to view the protected file
@@ -119,7 +119,7 @@ func (api *fileApi) download(c echo.Context) error {
 	if collection.IsView() {
 		fileRecord, err := api.app.Dao().FindRecordByViewFile(collection.Id, fileField.Name, filename)
 		if err != nil {
-			return NewNotFoundError("", fmt.Errorf("Failed to fetch view file field record: %w", err))
+			return NewNotFoundError("", fmt.Errorf("failed to fetch view file field record: %w", err))
 		}
 		baseFilesPath = fileRecord.BaseFilesPath()
 	}

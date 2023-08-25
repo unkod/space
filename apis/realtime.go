@@ -378,7 +378,7 @@ type recordData struct {
 func (api *realtimeApi) broadcastRecord(action string, record *models.Record, dryCache bool) error {
 	collection := record.Collection()
 	if collection == nil {
-		return errors.New("Record collection not set.")
+		return errors.New("record collection not set")
 	}
 
 	clients := api.app.SubscriptionsBroker().Clients()

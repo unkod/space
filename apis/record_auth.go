@@ -201,7 +201,7 @@ func (api *recordAuthApi) authWithOAuth2(c echo.Context) error {
 				}
 
 				if collection.CreateRule == nil {
-					return errors.New("Only admins can create new accounts with OAuth2")
+					return errors.New("only admins can create new accounts with OAuth2")
 				}
 
 				if *collection.CreateRule != "" {
@@ -218,7 +218,7 @@ func (api *recordAuthApi) authWithOAuth2(c echo.Context) error {
 			}
 
 			if _, err := txDao.FindRecordById(collection.Id, createForm.Id, createRuleFunc); err != nil {
-				return fmt.Errorf("Failed create rule constraint: %w", err)
+				return fmt.Errorf("failed create rule constraint: %w", err)
 			}
 
 			return nil
@@ -608,7 +608,7 @@ func (api *recordAuthApi) unlinkExternalAuth(c echo.Context) error {
 
 	externalAuth, err := api.app.Dao().FindExternalAuthByRecordAndProvider(record, provider)
 	if err != nil {
-		return NewNotFoundError("Missing external auth provider relation.", err)
+		return NewNotFoundError("missing external auth provider relation", err)
 	}
 
 	event := new(core.RecordUnlinkExternalAuthEvent)
@@ -619,7 +619,7 @@ func (api *recordAuthApi) unlinkExternalAuth(c echo.Context) error {
 
 	return api.app.OnRecordBeforeUnlinkExternalAuthRequest().Trigger(event, func(e *core.RecordUnlinkExternalAuthEvent) error {
 		if err := api.app.Dao().DeleteExternalAuth(externalAuth); err != nil {
-			return NewBadRequestError("Cannot unlink the external auth provider.", err)
+			return NewBadRequestError("cannot unlink the external auth provider", err)
 		}
 
 		return api.app.OnRecordAfterUnlinkExternalAuthRequest().Trigger(event, func(e *core.RecordUnlinkExternalAuthEvent) error {

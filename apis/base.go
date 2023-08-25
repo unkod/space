@@ -14,12 +14,9 @@ import (
 
 	"github.com/labstack/echo/v5"
 	"github.com/labstack/echo/v5/middleware"
-	"github.com/spf13/cast"
 	"github.com/unkod/space/core"
 	"github.com/unkod/space/tools/rest"
 )
-
-const trailedAdminPath = "/_/"
 
 // InitApi creates a configured echo instance with registered
 // system and app specific routes and middlewares.
@@ -163,79 +160,5 @@ func StaticDirectoryHandler(fileSystem fs.FS, indexFallback bool) echo.HandlerFu
 		}
 
 		return fileErr
-	}
-}
-
-func uiCacheControl() echo.MiddlewareFunc {
-	return func(next echo.HandlerFunc) echo.HandlerFunc {
-		return func(c echo.Context) error {
-			// add default Cache-Control header for all Admin UI resources
-			// (ignoring the root admin path)
-			if c.Request().URL.Path != trailedAdminPath {
-				c.Response().Header().Set("Cache-Control", "max-age=1209600, stale-while-revalidate=86400")
-			}
-
-			return next(c)
-		}
-	}
-}
-
-const hasAdminsCacheKey = "@hasAdmins"
-
-func updateHasAdminsCache(app core.App) error {
-	total, err := app.Dao().TotalAdmins()
-	if err != nil {
-		return err
-	}
-
-	app.Cache().Set(hasAdminsCacheKey, total > 0)
-
-	return nil
-}
-
-// installerRedirect redirects the user to the installer admin UI page
-// when the application needs some preliminary configurations to be done.
-func installerRedirect(app core.App) echo.MiddlewareFunc {
-	// keep hasAdminsCacheKey value up-to-date
-	app.OnAdminAfterCreateRequest().Add(func(data *core.AdminCreateEvent) error {
-		return updateHasAdminsCache(app)
-	})
-
-	app.OnAdminAfterDeleteRequest().Add(func(data *core.AdminDeleteEvent) error {
-		return updateHasAdminsCache(app)
-	})
-
-	return func(next echo.HandlerFunc) echo.HandlerFunc {
-		return func(c echo.Context) error {
-			// skip redirect checks for non-root level index.html requests
-			path := c.Request().URL.Path
-			if path != trailedAdminPath && path != trailedAdminPath+"index.html" {
-				return next(c)
-			}
-
-			hasAdmins := cast.ToBool(app.Cache().Get(hasAdminsCacheKey))
-
-			if !hasAdmins {
-				// update the cache to make sure that the admin wasn't created by another process
-				if err := updateHasAdminsCache(app); err != nil {
-					return err
-				}
-				hasAdmins = cast.ToBool(app.Cache().Get(hasAdminsCacheKey))
-			}
-
-			_, hasInstallerParam := c.Request().URL.Query()["installer"]
-
-			if !hasAdmins && !hasInstallerParam {
-				// redirect to the installer page
-				return c.Redirect(http.StatusTemporaryRedirect, "?installer#")
-			}
-
-			if hasAdmins && hasInstallerParam {
-				// clear the installer param
-				return c.Redirect(http.StatusTemporaryRedirect, "?")
-			}
-
-			return next(c)
-		}
 	}
 }
